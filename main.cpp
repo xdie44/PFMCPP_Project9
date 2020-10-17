@@ -48,6 +48,12 @@ struct Wrapper
     }
 };
 
+template<typename T, typename ...Args>
+void variadicHelper(T first, Args ... everythingElse)
+{
+    variadicHelper( everythingElse... ); //recursive call
+}
+
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
